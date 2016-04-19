@@ -11,6 +11,7 @@ class jogo_da_velha:
         self.window.rowconfigure(0, minsize= 100)
         self.window.rowconfigure(1, minsize= 100)
         self.window.rowconfigure(2, minsize= 100)        
+        self.window.rowconfigure(3, minsize= 420)        
         self.window.columnconfigure(0, minsize= 150)
         self.window.columnconfigure(1, minsize= 150)
         self.window.columnconfigure(2, minsize= 150)
@@ -32,6 +33,8 @@ class jogo_da_velha:
         self.button8.grid(row=2, column=1, sticky="nsew")
         self.button9 = tk.Button(self.window)
         self.button9.grid(row=2, column=2, sticky="nsew")
+       # self.mostra_jogador = tk.StringVar(self.window)
+        #self.mostra_jogador.grid(row=3, sticky="nsew")
         
     def iniciar(self):
         self.window.mainloop()
