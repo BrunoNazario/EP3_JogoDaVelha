@@ -76,35 +76,56 @@ class jogo_da_velha:
         
         
     #Botões precionados
+        
+    def button_clicado(self, i):
+        print("Botão {0} clicado".format(i))
            
     def button1_clicado(self):
-        print("Botão 1 clicado")
+        self.button_clicado(1)
     
     def button2_clicado(self):
-        print("Botão 2 clicado")
+        self.button_clicado(2)
         
     def button3_clicado(self):
-        print("Botão 3 clicado")
+        self.button_clicado(3)
         
     def button4_clicado(self):
-        print("Botão 4 clicado")
+        self.button_clicado(4)
     
     def button5_clicado(self):
-        print("Botão 5 clicado")
+        self.button_clicado(5)
         
     def button6_clicado(self):
-        print("Botão 6 clicado")
+        self.button_clicado(6)
         
     def button7_clicado(self):
-        print("Botão 7 clicado")
+        self.button_clicado(7)
         
     def button8_clicado(self):
-        print("Botão 8 clicado")
+        self.button_clicado(8)
         
     def button9_clicado(self):
-        print("Botão 9 clicado")
+        self.button_clicado(9)
         
+        
+        
+        
+        
+class Jogador:
     
+    def __init__ (self):
+        self.jogador1= ["X"]
+        self.jogador2=["O"]
+        
+    def Jogador (self):
+        if self.jogador == "X":
+            for i in range (9):
+                self.button_clicado(i)
+                print("X")
+        else:
+            for i in range (9):
+                self.button_clicado(i)
+                print("O")
     
         
 jogo = jogo_da_velha()
