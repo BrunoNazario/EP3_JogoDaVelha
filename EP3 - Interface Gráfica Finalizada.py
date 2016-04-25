@@ -27,7 +27,7 @@ class jogo_da_velha:
         #Criando o segundo botão.
         self.button2 = tk.Button(self.window)
         self.button2.grid(row=0, column=1, sticky="nsew")
- 
+        
         #Criando o terceiro botão.
         self.button3 = tk.Button(self.window)
         self.button3.grid(row=0, column=2, sticky="nsew")
