@@ -74,56 +74,35 @@ class jogo_da_velha:
     def iniciar(self):
         self.window.mainloop()
         
-    #Botões precionados
-        
-    def button_clicado(self,i):
-        print("Botão {0} clicado".format(i))
+    #Botões pressionados
            
     def button1_clicado(self):
-        if self.button_clicado(1):
-            self.button1.configure(text="X")
-            self.button1.configure(state="disabled")
+        self.button1.configure(text="X")
     
     def button2_clicado(self):
-        if self.button_clicado(2):
-            self.button2.configure(text="X")
-            self.button2.configure(state="disabled")
-        
+        self.button2.configure(text="X")
+
     def button3_clicado(self):
-        if self.button_clicado(3):
-            self.button3.configure(text="X")
-            self.button3.configure(state="disabled")        
-        
+        self.button3.configure(text="X")
+                
     def button4_clicado(self):
-        if self.button_clicado(4):
-            self.button4.configure(text="X")
-            self.button4.configure(state="disabled")
-    
+        self.button4.configure(text="X")
+            
     def button5_clicado(self):
-        if self.button_clicado(5):
-            self.button5.configure(text="X")
-            self.button5.configure(state="disabled")
-        
+        self.button5.configure(text="X")
+                
     def button6_clicado(self):
-        if self.button_clicado(6):
-            self.button6.configure(text="X")
-            self.button6.configure(state="disabled")
-        
+        self.button6.configure(text="X")
+                
     def button7_clicado(self):
-        if self.button_clicado(7):
-            self.button7.configure(text="X")
-            self.button7.configure(state="disabled")
-        
+        self.button7.configure(text="X")
+                
     def button8_clicado(self):
-        if self.button_clicado(8):
-            self.button8.configure(text="X")
-            self.button8.configure(state="disabled")
-        
+        self.button8.configure(text="X")
+                
     def button9_clicado(self):
-        if self.button_clicado(9):
-            self.button9.configure(text="X")
-            self.button9.configure(state="disabled")
-        
+        self.button9.configure(text="X")
+                
     def muda_jogador1(self):    
         if self.button1_clicado == True and self.mostra_jogador == "Jogador: X":
             self.mostra_jogador == "Jogador: O"
