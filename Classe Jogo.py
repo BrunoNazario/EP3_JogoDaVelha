@@ -7,5 +7,3 @@ class jogo:
         matriz_tabuleiro = np.zeros(3,3)
     
     def jogador1(self):
-    
-        
