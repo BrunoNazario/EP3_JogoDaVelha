@@ -214,79 +214,12 @@ class jogo_da_velha:
         self.button9 = tk.Button(self.window)
         self.button9.grid(row=2, column=2, sticky="nsew")
         self.button9.configure(command= self.button9_clicado)
-
-
-#    def muda_jogador1(self):    
-#        if self.button1_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button1_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#    
-#    def muda_jogador2(self):
-#        if self.button2_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button2_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#   
-#    def muda_jogador3(self):
-#        if self.button3_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button3_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador4(self):
-#        if self.button4_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button4_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador5(self):
-#        if self.button5_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button5_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador6(self):
-#        if self.button6_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button6_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador7(self):
-#        if self.button7_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button7_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador8(self):
-#        if self.button8_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button8_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#    def muda_jogador9(self):
-#        if self.button9_clicado == True and self.mostra_jogador == "Jogador: X":
-#            self.mostra_jogador == "Jogador: O"
-#        elif self.button9_clicado == True and self.mostra_jogador == "Jogador: O":
-#            self.mostra_jogador == "Jogador: X"
-#
-#class Jogador:
-#    
-#    def __init__ (self):
-#        self.jogador1= ["X"]
-#        self.jogador2=["O"]
-#        
-#    def Jogador (self):
-#        if self.jogador == "X":
-#            for i in range (9):
-#                self.button_clicado(i)
-#                print("X")
-#        else:
-#            for i in range (9):
-#                self.button_clicado(i)
-#                print("O")
-#                
-
         
+        def muda_jogador(self):
+            if self.player == 0:
+                self.mostra_jogador.set("Jogador: X")
+            else:
+                self.mostra_jogador.set("Jogador: O")
+            
 jogo = jogo_da_velha()
 jogo.iniciar()
