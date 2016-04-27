@@ -12,7 +12,7 @@ class jogo_da_velha:
         #Criando janela e os campos
         self.window = tk.Tk()
         self.window.title("Jogo da Velha")
-        self.window.geometry("450x350+150+150")
+        self.window.geometry("450x400+150+150")
        
         #Definindo o tamanha das linhas e colunas da janela.       
         self.window.rowconfigure(0, minsize= 100)
@@ -76,7 +76,12 @@ class jogo_da_velha:
         self.button9.grid(row=2, column=2, sticky="nsew")
         self.button9.configure(command= self.button9_clicado)
         
-        #Combinações ganhadoras
+        self.button_restart=tk.Button(self.window)
+        self.button_restart.grid(row=4, column=1, sticky="nsew")
+        self.button_restart.configure(text = "Reiniciar")        
+        self.button_restart.configure(command= self.button_reinicia)
+
+    #Combinações ganhadoras
         self.combinaçoes_ganhadoras = [{self.button1,self.button2, self.button3}, {self.button4, self.button5, self.button6},
                                        {self.button7, self.button8, self.button9}, {self.button1, self.button5, self.button9},
                                        {self.button3, self.button5, self.button7}, {self.button1, self.button4, self.button7},
@@ -88,9 +93,7 @@ class jogo_da_velha:
         
     def Vitoria(self):
         return self.combinaçoes_ganhadoras
-        
-        
-     
+
     #Botões pressionados
            
     def button1_clicado(self):
@@ -166,6 +169,53 @@ class jogo_da_velha:
             self.player -=1
             
                 
+    def button_reinicia(self):
+          #Criando o primeiro botão. 
+        self.button1 = tk.Button(self.window)
+        self.button1.grid(row=0, column=0, sticky="nsew")
+        self.button1.configure(command = self.button1_clicado)
+
+        #Criando o segundo botão.
+        self.button2 = tk.Button(self.window)
+        self.button2.grid(row=0, column=1, sticky="nsew")
+        self.button2.configure(command = self.button2_clicado)
+ 
+        #Criando o terceiro botão.
+        self.button3 = tk.Button(self.window)
+        self.button3.grid(row=0, column=2, sticky="nsew")
+        self.button3.configure(command = self.button3_clicado)
+
+        #Criando o quarto botão.
+        self.button4 = tk.Button(self.window)
+        self.button4.grid(row=1, column=0, sticky="nsew")
+        self.button4.configure(command = self.button4_clicado)
+
+        #Criando o quinto botão.
+        self.button5 = tk.Button(self.window)
+        self.button5.grid(row=1, column=1, sticky="nsew")
+        self.button5.configure(command = self.button5_clicado)
+
+        #Criando o sexto botão.
+        self.button6 = tk.Button(self.window)
+        self.button6.grid(row=1, column=2, sticky="nsew")
+        self.button6.configure(command = self.button6_clicado)
+
+        #Criando o sétimo botão.
+        self.button7 = tk.Button(self.window)
+        self.button7.grid(row=2, column=0, sticky="nsew")
+        self.button7.configure(command = self.button7_clicado)
+
+        #Criando o oitavo botão.
+        self.button8 = tk.Button(self.window)
+        self.button8.grid(row=2, column=1, sticky="nsew")
+        self.button8.configure(command = self.button8_clicado)
+
+        #Criando o nono botão.
+        self.button9 = tk.Button(self.window)
+        self.button9.grid(row=2, column=2, sticky="nsew")
+        self.button9.configure(command= self.button9_clicado)
+
+
 #    def muda_jogador1(self):    
 #        if self.button1_clicado == True and self.mostra_jogador == "Jogador: X":
 #            self.mostra_jogador == "Jogador: O"
