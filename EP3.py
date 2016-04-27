@@ -77,11 +77,11 @@ class jogo_da_velha:
         self.button9.configure(command= self.button9_clicado)
         
         #Combinações ganhadoras
-        self.combinaçoes_ganhadoras = [{self.button1,self.button2, self.button3}, {self.button4, self.button5, self.button6},
-                                       {self.button7, self.button8, self.button9}, {self.button1, self.button5, self.button9},
-                                       {self.button3, self.button5, self.button7}, {self.button1, self.button4, self.button7},
-                                       {self.button2, self.button5, self.button8}, {self.button3, self.button6, self.button9}]
-                                       
+#        self.combinaçoes_ganhadoras = [{self.button1,self.button2, self.button3}, {self.button4, self.button5, self.button6},
+#                                       {self.button7, self.button8, self.button9}, {self.button1, self.button5, self.button9},
+#                                       {self.button3, self.button5, self.button7}, {self.button1, self.button4, self.button7},
+#                                       {self.button2, self.button5, self.button8}, {self.button3, self.button6, self.button9}]
+#                                       
                                        
     def iniciar(self):
         self.window.mainloop()
@@ -97,75 +97,102 @@ class jogo_da_velha:
         if self.player == 0:
             self.button1.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button1.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
   
     def button2_clicado(self):
         if self.player == 0:
             self.button2.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button2.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
 
     def button3_clicado(self):
         if self.player == 0:
             self.button3.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button3.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
                 
     def button4_clicado(self):
         if self.player == 0:
             self.button4.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button4.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
             
     def button5_clicado(self):
         if self.player == 0:
             self.button5.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button5.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
                 
     def button6_clicado(self):
         if self.player == 0:
             self.button6.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button6.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
                 
     def button7_clicado(self):
         if self.player == 0:
             self.button7.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button7.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
                 
     def button8_clicado(self):
         if self.player == 0:
             self.button8.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button8.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
                 
     def button9_clicado(self):
         if self.player == 0:
             self.button9.configure(text="X", state="disabled")
             self.player += 1
+            self.mostra_jogador.set("Jogador: O")
         else:
             self.button9.configure(text="O", state="disabled")
             self.player -=1
+            self.mostra_jogador.set("Jogador: X")
             
-                
+            
+#class Jogo:
+#    
+#    def __init__ (self):
+#        
+#        #Combinações ganhadoras
+#        self.combinaçoes_ganhadoras = [{1,2,3}, {4,5,6}, {7,8,9}, {1,5,9},
+#                                       {3,5,7}, {1,4,7}, {2,5,8}, {3,6,9}]
+#                
+    
 #    def muda_jogador1(self):    
 #        if self.button1_clicado == True and self.mostra_jogador == "Jogador: X":
 #            self.mostra_jogador == "Jogador: O"
