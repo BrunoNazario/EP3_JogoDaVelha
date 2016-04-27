@@ -92,6 +92,17 @@ class jogo_da_velha:
         self.window.mainloop()
         
     def Vitoria(self):
+        if self.combinaçoes_ganhadoras == True:
+            self.button1.configure(state = "disabled")
+            self.button2.configure(state = "disabled")
+            self.button3.configure(state = "disabled")
+            self.button4.configure(state = "disabled")
+            self.button5.configure(state = "disabled")
+            self.button6.configure(state = "disabled")
+            self.button7.configure(state = "disabled")
+            self.button8.configure(state = "disabled")
+            self.button9.configure(state = "disabled")
+            
         return self.combinaçoes_ganhadoras
 
     #Botões pressionados
