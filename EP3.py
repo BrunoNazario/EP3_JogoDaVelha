@@ -76,11 +76,33 @@ class jogo_da_velha:
         self.button9.grid(row=2, column=2, sticky="nsew")
         self.button9.configure(command= self.button9_clicado)
         
+#        #Combinações ganhadoras
+        self.combinaçoes_ganhadoras = [{self.button1_clicado,self.button2_clicado, self.button3_clicado}, {self.button4_clicado, self.button5_clicado, self.button6_clicado},
+                                       {self.button7_clicado, self.button8_clicado, self.button9_clicado}, {self.button1_clicado, self.button5_clicado, self.button9_clicado},
+                                       {self.button3_clicado, self.button5_clicado, self.button7_clicado}, {self.button1_clicado, self.button4_clicado, self.button7_clicado},
+                                       {self.button2_clicado, self.button5_clicado, self.button8_clicado}, {self.button3_clicado, self.button6_clicado, self.button9_clicado}]
+        
         
     def iniciar(self):
         self.window.mainloop()
         
-     
+    def Vitoria(self):
+        if self.combinaçoes_ganhadoras == True:
+            self.button1.configure(state = "disabled")
+            self.button2.configure(state = "disabled")
+            self.button3.configure(state = "disabled")
+            self.button4.configure(state = "disabled")
+            self.button5.configure(state = "disabled")
+            self.button6.configure(state = "disabled")
+            self.button7.configure(state = "disabled")
+            self.button8.configure(state = "disabled")
+            self.button9.configure(state = "disabled")
+        else:
+            pass
+            
+        return self.combinaçoes_ganhadoras
+
+
     #Botões pressionados
            
     def button1_clicado(self):
@@ -173,6 +195,7 @@ class jogo_da_velha:
             self.player -=1
             self.mostra_jogador.set("Jogador: X")
             
+
 
         
 jogo = jogo_da_velha()
